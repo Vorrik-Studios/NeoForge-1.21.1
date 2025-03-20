@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "firstneomod:block/magic_block"
+    }
+  }
+}

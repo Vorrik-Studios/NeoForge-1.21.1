@@ -1,0 +1,10 @@
+// 1.21.1	2025-03-19T22:54:35.9384657	Block States: firstneomod
+b435cdfc9aa7bfa51868473f755fb1dc717954e0 assets/firstneomod/blockstates/bismuth_block.json
+69bab1df0eecb0fe4e4ba8cedd07167a5e12c136 assets/firstneomod/blockstates/bismuth_ore.json
+041389e956ad644f852d54c2752daee0d674ee37 assets/firstneomod/blockstates/magic_block.json
+0e34e9fafbf1f38aa31b6381488bfe66a2ca933a assets/firstneomod/models/block/bismuth_block.json
+3cc8d6fb983801a05f8705cb2583e23df7b4f992 assets/firstneomod/models/block/bismuth_ore.json
+dbf7a8c45499f505717ef5d23f4227a1b0f66303 assets/firstneomod/models/block/magic_block.json
+6f4357d6ebeb3cf6722ed3edfa8c394f9a339083 assets/firstneomod/models/item/bismuth_block.json
+11bdd2c9cb07b985b5b3597f1c4e265ce06e11f4 assets/firstneomod/models/item/bismuth_ore.json
+5e27cdce507fa2e687c52568602fc5e02e29f924 assets/firstneomod/models/item/magic_block.json

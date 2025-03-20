@@ -1,0 +1,4 @@
+// 1.21.1	2025-03-19T22:54:35.9404657	Tags for minecraft:block mod id firstneomod
+311b5f471f44172e1b347c0bf1df8693f975d215 data/minecraft/tags/block/incorrect_for_diamond_tool.json
+9e4121661349973cd302ffb91a272c26f5110a0c data/minecraft/tags/block/mineable/pickaxe.json
+e9c458fb1526014ca6c3f99aa9722d244f5795c9 data/minecraft/tags/block/needs_iron_tool.json

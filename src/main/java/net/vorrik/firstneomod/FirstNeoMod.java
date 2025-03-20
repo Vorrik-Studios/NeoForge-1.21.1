@@ -1,6 +1,12 @@
 package net.vorrik.firstneomod;
 
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.vorrik.firstneomod.block.ModBlocks;
 import net.vorrik.firstneomod.creativetabs.ModCreativeModeTabs;
 import net.vorrik.firstneomod.item.ModItems;
@@ -22,6 +28,9 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(FirstNeoMod.MOD_ID)
 public class FirstNeoMod
@@ -36,12 +45,12 @@ public class FirstNeoMod
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        this.registerModRegisters(modEventBus);
+
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (FirstNeoMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
-
-        this.registerModRegisters(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -55,9 +64,13 @@ public class FirstNeoMod
     }
 
     private void registerModRegisters(IEventBus eventBus) {
-        ModItems.register(eventBus);
-        ModBlocks.register(eventBus);
-        ModCreativeModeTabs.register(eventBus);
+        try {
+            ModItems.register(eventBus);
+            ModBlocks.register(eventBus);
+            ModCreativeModeTabs.register(eventBus);
+        } catch (Exception e) {
+            LOGGER.error("Error during common register mod registers", e);
+        }
     }
 
     // Add the example block item to the building blocks tab

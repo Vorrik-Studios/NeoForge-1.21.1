@@ -39,5 +39,14 @@ public class ModLanguageProvider extends LanguageProvider {
         this.add(Translations.itemTranslation("radish"), "Radish");
         this.add(Translations.itemTranslation("starlight_ashes"), "Starlight Ashes");
         this.add(Translations.itemTranslation("frostfire_ice"), "Frostfire Ice");
+        this.add(Translations.trapDoorTranslation("bismuth"), "Bismuth Trapdoor");
+        this.add(Translations.doorTranslation("bismuth"), "Bismuth Door");
+        this.add(Translations.fenceTranslation("bismuth"), "Bismuth Fence");
+        this.add(Translations.fenceGateTranslation("bismuth"), "Bismuth Fence Gate");
+        this.add(Translations.wallTranslation("bismuth"), "Bismuth Wall");
+        this.add(Translations.pressurePlateTranslation("bismuth"), "Bismuth Pressure Plate");
+        this.add(Translations.buttonTranslation("bismuth"), "Bismuth Button");
+        this.add(Translations.stairsTranslation("bismuth"), "Bismuth Stairs");
+        this.add(Translations.slabTranslation("bismuth"), "Bismuth Slab");
     }
 }

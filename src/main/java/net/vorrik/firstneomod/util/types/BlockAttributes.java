@@ -12,7 +12,7 @@ public class BlockAttributes  {
 
     public BlockAttributes() {
         // Set the default values
-        this.BStrength = 3;
+        this.BStrength = 2f;
         this.BSoundType = SoundType.STONE;
         this.BExperience = UniformInt.of(1, 1);
     }

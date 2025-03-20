@@ -28,6 +28,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(ModBlocks.BISMUTH_BLOCK.get());
         this.dropSelf(ModBlocks.MAGIC_BLOCK.get());
+        this.dropSelf(ModBlocks.BISMUTH_STAIRS.get());
+        this.dropSelf(ModBlocks.BISMUTH_FENCE.get());
+        this.dropSelf(ModBlocks.BISMUTH_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.BISMUTH_WALL.get());
+        this.dropSelf(ModBlocks.BISMUTH_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.BISMUTH_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.BISMUTH_BUTTON.get());
+
+        this.add(ModBlocks.BISMUTH_SLAB.get(), block -> createSlabItemTable(ModBlocks.BISMUTH_SLAB.get()));
+        this.add(ModBlocks.BISMUTH_DOOR.get(), block -> createDoorTable(ModBlocks.BISMUTH_DOOR.get()));
 
         this.add(ModBlocks.BISMUTH_ORE.get(), block -> createMultipleOreDrops(ModBlocks.BISMUTH_ORE.get(), ModItems.RAW_BISMUTH.get(), 1, 3));
     }

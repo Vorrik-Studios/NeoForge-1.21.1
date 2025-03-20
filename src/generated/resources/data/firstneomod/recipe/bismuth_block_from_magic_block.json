@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "firstneomod:magic_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "firstneomod:bismuth_block"
+  }
+}
