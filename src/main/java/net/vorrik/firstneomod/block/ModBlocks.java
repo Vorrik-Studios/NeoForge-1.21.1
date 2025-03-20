@@ -13,7 +13,7 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(FirstNeoMod.MOD_ID);
     public static final DeferredBlock<Block> BISMUTH_BLOCK = BlockRegistry.simpleBlock("bismuth", () -> new BlockAttributes().strength(4f).sound(SoundType.AMETHYST));
     public static final DeferredBlock<Block> BISMUTH_ORE = BlockRegistry.oreBlock("bismuth", () -> new BlockAttributes().strength(3f).experience(UniformInt.of(2, 4)));
-    public static final DeferredBlock<Block> MAGIC_BLOCK = BlockRegistry.magicBlock(() -> new BlockAttributes().strength(2f).sound(SoundType.AMETHYST_CLUSTER));
+    public static final DeferredBlock<Block> MAGIC_BLOCK = BlockRegistry.magicBlock(() -> new BlockAttributes().sound(SoundType.AMETHYST_CLUSTER));
     public static final DeferredBlock<StairBlock> BISMUTH_STAIRS = BlockRegistry.stairBlock(BlockAttributes::new, "bismuth", () -> ModBlocks.BISMUTH_BLOCK.get().defaultBlockState());
     public static final DeferredBlock<SlabBlock> BISMUTH_SLAB = BlockRegistry.slabBlock(BlockAttributes::new, "bismuth");
     public static final DeferredBlock<PressurePlateBlock> BISMUTH_PRESSURE_PLATE = BlockRegistry.pressurePlateBlock(BlockAttributes::new, "bismuth");

@@ -12,6 +12,7 @@ import net.vorrik.firstneomod.block.ModBlocks;
 import net.vorrik.firstneomod.block.custom.MagicBlock;
 import net.vorrik.firstneomod.item.ModItems;
 import net.vorrik.firstneomod.util.types.BlockAttributes;
+import org.openjdk.nashorn.internal.runtime.logging.Logger;
 
 import java.util.function.Supplier;
 

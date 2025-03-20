@@ -1,12 +1,5 @@
 package net.vorrik.firstneomod;
 
-import net.minecraft.core.HolderLookup;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.PackOutput;
-import net.minecraft.data.loot.LootTableProvider;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.vorrik.firstneomod.block.ModBlocks;
 import net.vorrik.firstneomod.creativetabs.ModCreativeModeTabs;
 import net.vorrik.firstneomod.item.ModItems;
@@ -45,7 +38,9 @@ public class FirstNeoMod
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        this.registerModRegisters(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (FirstNeoMod) to respond directly to events.
@@ -63,28 +58,10 @@ public class FirstNeoMod
 
     }
 
-    private void registerModRegisters(IEventBus eventBus) {
-        try {
-            ModItems.register(eventBus);
-            ModBlocks.register(eventBus);
-            ModCreativeModeTabs.register(eventBus);
-        } catch (Exception e) {
-            LOGGER.error("Error during common register mod registers", e);
-        }
-    }
-
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.BISMUTH);
-            event.accept(ModItems.RAW_BISMUTH);
-        }
 
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.BISMUTH_BLOCK);
-            event.accept(ModBlocks.BISMUTH_ORE);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
